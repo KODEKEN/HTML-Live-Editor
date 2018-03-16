@@ -3,6 +3,83 @@
 <!--<html>-->
 
 <head>
+  <link expr:href='data:blog.homepageUrl' rel='openid.delegate'/>
+<link expr:href='data:blog.url' rel='canonical'/>
+<b:if cond='data:blog.pageType == &quot;index&quot;'>
+<title><data:blog.pageTitle/></title>
+<b:else/>
+<b:if cond='data:blog.pageType != &quot;error_page&quot;'>
+<title><data:blog.pageName/> - <data:blog.title/></title>
+</b:if></b:if>
+<b:if cond='data:blog.pageType == &quot;error_page&quot;'>
+<title>Page Not Found - <data:blog.title/></title>
+</b:if>
+<b:if cond='data:blog.pageType == &quot;archive&quot;'>
+<meta content='noindex' name='robots'/>
+</b:if>
+<b:if cond='data:blog.searchLabel'>
+<meta content='noindex,nofollow' name='robots'/>
+</b:if>
+<b:if cond='data:blog.isMobile'>
+<meta content='noindex,nofollow' name='robots'/>
+</b:if>
+<b:if cond='data:blog.pageType != &quot;error_page&quot;'>
+<meta expr:content='data:blog.metaDescription' name='description'/>
+<b:if cond='data:blog.homepageUrl != data:blog.url'>
+<meta expr:content='data:blog.pageName + &quot;, &quot; + data:blog.pageTitle + &quot;, &quot; + data:blog.title' name='keywords'/>
+</b:if></b:if>
+<b:if cond='data:blog.url == data:blog.homepageUrl'>
+<meta content='Blogger, HTML, CSS, JS, News, Template, Pemarograman Web, Webdesign, Kode Ken' name='keywords'/></b:if>
+<link expr:href='data:blog.homepageUrl + &quot;feeds/posts/default&quot;' expr:title='data:blog.title + &quot; - Atom&quot;' rel='alternate' type='application/atom+xml'/>
+<link expr:href='data:blog.homepageUrl + &quot;feeds/posts/default?alt=rss&quot;' expr:title='data:blog.title + &quot; - RSS&quot;' rel='alternate' type='application/rss+xml'/>
+<link expr:href='&quot;http://www.blogger.com/feeds/&quot; + data:blog.blogId + &quot;/posts/default&quot;' expr:title='data:blog.title + &quot; - Atom&quot;' rel='alternate' type='application/atom+xml'/>
+<b:if cond='data:blog.pageType == &quot;item&quot;'>
+<b:if cond='data:blog.postImageThumbnailUrl'>
+<link expr:href='data:blog.postImageThumbnailUrl' rel='image_src'/>
+</b:if></b:if>
+<link href='https://4.bp.blogspot.com/-oJ_V2sq-ymQ/WnUExk4KQUI/AAAAAAAAAJM/8ZfCPdp8zVgGmfdhdunMogGbME3CJ_lewCPcBGAYYCw/s1600/Logo.png' rel='icon' type='image/x-icon'/>
+<link href='https://plus.google.com/108087962843007456202/about' rel='author'/>
+<link href='https://plus.google.com/108087962843007456202' rel='me'/>
+<meta content='8sB5dAzqemlkYNKfmwXtjTMNHMnJOBytjew3_j3Bpb8' name='google-site-verification'/>
+<meta content='Indonesia' name='geo.placename'/>
+<meta content='Keanu Rivlady' name='Author'/>
+<meta content='id' name='geo.country'/>
+<b:if cond='data:blog.url == data:blog.homepageUrl'> 
+<b:if cond='data:blog.pageType == &quot;item&quot;'> 
+<b:if cond='data:blog.pageType == &quot;static_page&quot;'>  
+<b:if cond='data:blog.url'>
+<meta expr:content='data:blog.url' property='og:url'/>
+</b:if>
+<meta expr:content='data:blog.title' property='og:site_name'/>
+<b:if cond='data:blog.pageName'>
+<meta expr:content='data:blog.pageName' property='og:title'/>
+</b:if></b:if></b:if></b:if>
+<meta expr:content='data:blog.pageName' property='og:title'/>
+<b:if cond='data:blog.pageType == &quot;item&quot;'>
+<meta content='article' property='og:type'/>
+<b:else/>
+<meta content='website' property='og:type'/>
+</b:if>
+<meta expr:content='data:blog.canonicalUrl' property='og:url'/>
+<b:if cond='data:blog.postImageUrl'>
+<meta expr:content='data:blog.postImageUrl' property='og:image'/>
+<b:else/>
+<b:if cond='data:blog.postImageThumbnailUrl'>
+<meta expr:content='data:blog.postThumbnailUrl' property='og:image'/>
+<b:else/>
+<meta expr:content='data:blog.blogspotFaviconUrl' property='og:image'/>
+</b:if></b:if>
+<b:if cond='data:blog.metaDescription'>
+<meta expr:content='data:blog.metaDescription' property='og:description'/>
+<b:else/>
+<meta content='Kode Ken Adalah Sebuah Situs Beajar Pemrograman Web Dan Blogger Serta Berbagi Template Premium' property='og:description'/>
+</b:if>
+<meta expr:content='data:blog.title' property='og:site_name'/>
+<meta content='xxxxx' property='fb:admins'/>
+<meta content='xxxxx' property='fb:app_id'/>
+<meta expr:content='data:blog.title' name='twitter:site'/>
+<meta content='@xxxxx' name='twitter:creator'/>
+<meta content='#0081c0' name='theme-color'/><meta content='#0081c0' name='msapplication-navbutton-color'/><meta content='yes' name='apple-mobile-web-app-capable'/><meta content='#0081c0' name='apple-mobile-web-app-status-bar-sty
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
   <title>Kode Ken: HTML Live Editor</title>
